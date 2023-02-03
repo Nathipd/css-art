@@ -1,0 +1,130 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #a2d594;
+    margin: auto;
+}
+
+.cat {
+    position: relative;
+    top: 50vmin;
+    left: 40vmin;
+}
+
+.face {
+    background-color: #33292b;
+    height: 12vmin;
+    width: 21vmin;
+    border-radius: 4vmin;
+}
+
+.left-ear,
+.right-ear {
+    width: 0;
+    height: 0;
+
+    border-bottom: 7vmin solid #332928;
+    border-left: 3vmin solid transparent;
+    border-right: 3vmin solid transparent;
+
+    position: relative;
+    z-index: -1;
+}
+
+.left-ear {
+    bottom: 4.9vmin;
+    left: 0vmin;
+    transform: rotate(-30deg);
+}
+
+.right-ear {
+    bottom: 11.9vmin;
+    left: 15vmin;
+    transform: rotate(30deg);
+}
+
+.left-inner {
+    border-bottom: 7vmin solid #d36149;
+    border-left: 3.5vmin solid transparent;
+
+    position: relative;
+    right: 3.49vmin;
+}
+
+.right-inner {
+    border-bottom: 7vmin solid #d36149;
+    border-right: 3.5vmin solid transparent;
+
+    position: relative;
+}
+
+.left-eye,
+.right-eye {
+    background-color: #d2873b;
+    height: 4vmin;
+    width: 4vmin;
+    border-radius: 5vmin;
+    position: relative;
+}
+
+.left-eye {
+    bottom: 11vmin;
+    left: 4vmin;
+}
+
+.right-eye {
+    bottom: 15vmin;
+    left: 13vmin;
+}
+
+.left-eyeball,
+.right-eyeball {
+    background-color: #262626;
+    height: 3.4vmin;
+    width: 3.4vmin;
+    border-radius: 5vmin;
+    position: relative;
+    top: 0.3vmin;
+    left: 0.3vmin;
+}
+
+.nose {
+    width: 0;
+    height: 0;
+    border-top: 1.5vmin solid #d36149;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    position: relative;
+    bottom: 15.5vmin;
+    left: 9.5vmin;
+}
+
+.left-lip,
+.right-lip {
+    background-color: #d36149;
+    height: 1.4vmin;
+    width: 0.29px;
+    position: relative;
+}
+
+.left-lip {
+    transform: rotate(45deg);
+    left: 10vmin;
+    bottom: 16vmin;
+}
+
+.right-lip {
+    transform: rotate(-45deg);
+    left: 11vmin;
+    bottom: 17.4vmin;
+}

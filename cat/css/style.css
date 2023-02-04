@@ -16,6 +16,8 @@ body {
 }
 
 .cat {
+    width: 0;
+    height: 0;
     position: relative;
     top: 50vmin;
     left: 40vmin;
@@ -43,7 +45,7 @@ body {
 
 .left-ear {
     bottom: 4.9vmin;
-    left: 0vmin;
+    left: 0;
     transform: rotate(-30deg);
 }
 
@@ -101,30 +103,79 @@ body {
 .nose {
     width: 0;
     height: 0;
-    border-top: 1.5vmin solid #d36149;
-    border-left: 2px solid transparent;
-    border-right: 2px solid transparent;
+    border-top: 1.2vmin solid #d36149;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
     position: relative;
-    bottom: 15.5vmin;
-    left: 9.5vmin;
+    bottom: 16.1vmin;
+    left: 9.55vmin;
 }
 
 .left-lip,
 .right-lip {
     background-color: #d36149;
     height: 1.4vmin;
-    width: 0.29px;
+    width: 0.1vmin;
     position: relative;
 }
 
 .left-lip {
     transform: rotate(45deg);
     left: 10vmin;
-    bottom: 16vmin;
+    bottom: 16.3vmin;
 }
 
 .right-lip {
     transform: rotate(-45deg);
     left: 11vmin;
-    bottom: 17.4vmin;
+    bottom: 17.7vmin;
+}
+
+.body{
+    background-color: #33292b;
+    height: 12vmin;
+    width: 15vmin;
+    position: relative;
+    left: 7vmin;
+    bottom: 0.1vmin;
+    border-radius: 0 6vmin 0 0; 
+}
+
+.left-paw, .right-paw{
+    background-color: #33292b;
+    height: 1vmin;
+    width: 2.6vmin;
+    position: relative;
+    top: 12vmin;
+    border-radius: 0 0 1vmin 1vmin;
+}
+
+.left-paw{
+    top: 12vmin;
+}
+
+.right-paw{
+    top: 11vmin;
+    left: 5.8vmin;
+}
+
+.tail{
+    background-color: #33292b;
+    height: 2vmin;
+    width: 12vmin;
+    position: relative;
+    top: 8vmin;
+    left: 10vmin;
+    border-radius: 0 2vmin 2vmin 0;
+}
+
+.shadow{
+    background-color: rgba(8, 8, 8, 0.027);
+    height: 3vmin;
+    width: 15vmin;
+    border-radius: 50vmin;
+    position: relative;
+    bottom: 1.2vmin;
+    left: 4vmin;
+    z-index: -1;
 }

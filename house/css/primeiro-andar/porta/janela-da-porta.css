@@ -1,0 +1,38 @@
+
+.porta-janela {
+    height: 75%;
+    align-self: end;
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+    border: 0.7vmin solid var(--batente);
+    border-radius: 0.25vmin;
+}
+
+.porta-janela-batente {
+    height: 4.2vmin;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    border: 0.1vmin solid white;
+    z-index: 1;
+}
+
+.porta-vidro {
+    border: 0.3vmin solid white;
+
+    background-color: var(--janela);
+}
+
+.porta-reflexo {
+    width: 2vmin;
+    height: 4vmin;
+
+    position: relative;
+    left: 7.2vmin;
+    top: 2.7vmin;
+    transform: skew(-18deg);
+
+    background: var(--reflexo);
+}

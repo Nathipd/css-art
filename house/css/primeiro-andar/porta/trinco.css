@@ -1,0 +1,47 @@
+.trinco{
+    grid-column: 3/4;
+    grid-row: 2/3;
+    
+    height: 3vmin;
+    width: 2.2vmin;
+
+    background-color: var(--trinco);
+
+    position: relative;
+    top: 2vmin;
+    left: 2.6vmin;
+
+    border-radius: 0.5vmin;
+}
+.macaneta{
+    height: 0.6vmin;
+    width: 2.5vmin;
+
+    background-color: var(--macaneta);
+
+    position: relative;
+    top: 0.6vmin;
+    left: 0.5vmin;
+
+    box-shadow: 0.2vmin 0.5vmin 1vmin rgba(0, 0, 0, 0.253);
+    
+    z-index: 1;
+}
+
+.fechadura{
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    height: 0.67vmin;
+    width: 0.7vmin;
+
+    background-color: var(--fechadura);
+
+    position: relative;
+    top: 1.2vmin;
+    left: 0.6vmin;
+
+    border-radius: 5vmin;
+
+    z-index: 1;
+}

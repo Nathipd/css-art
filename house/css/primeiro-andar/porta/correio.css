@@ -1,0 +1,24 @@
+
+.porta-correio {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    height: 90%;
+    align-self: end;
+
+
+    border: 0.3vmin solid var(--detalhe-porta);
+    border-bottom: none;
+}
+
+.correio {
+    width: 2.7vmin;
+    height: 1vmin;
+
+    background-color: var(--correio);
+    border: 0.1vmin solid rgba(0, 0, 0, 0.103);
+
+    position: relative;
+    top: 1.5vmin;
+    left: 0.3vmin;
+}

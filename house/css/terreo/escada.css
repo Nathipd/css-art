@@ -1,0 +1,54 @@
+
+.escada {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2vmin 1.5vmin 2vmin 1.5vmin;
+    background-color: transparent;
+}
+
+.primeiro-dregrau-topo, .segundo-dregrau-topo{
+    grid-column: 2/3;
+    
+    border-bottom: 2vmin solid #9e9e9e;
+    border-left: 1vmin solid transparent;
+    border-right: 1vmin solid transparent;
+
+    height: fit-content;
+    
+    z-index: 1;
+}
+
+.primeiro-dregrau-topo {
+    grid-row: 1/2;
+    
+    width: 18vmin;
+
+    position: relative;
+    left: 1vmin;
+}
+
+.segundo-dregrau-topo {
+    grid-row: 3/4;
+
+    width: 100%;
+}
+
+.primeiro-degrau-base, .segundo-degrau-base{
+    background-color: #bdbdbd;
+    grid-column: 2/3;
+    z-index: 1;
+}
+
+.primeiro-degrau-base {
+    grid-row: 2/3;
+
+    width: 18vmin;
+    height: 2vmin;
+
+    position: relative;
+    left: 1vmin;
+}
+
+.segundo-degrau-base {
+    grid-row: 4/5;
+}

@@ -1,0 +1,77 @@
+/* Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* variáveis */
+:root {
+    --parede: rgba(253,255,248);
+    --terreo: rgb(164,86,78);
+
+    --porta: rgba(237,196,167);
+    --detalhe-porta: rgb(168, 78, 73);
+    --batente: rgb(185,84,79);
+
+    --janela: #e1f5fe;
+    --reflexo: #4fc2f713;
+
+    --correio: rgb(189,119,64);
+
+    --trinco: rgba(138, 145, 146, 0.397);
+    --macaneta: rgb(138,145,146);
+    --fechadura: rgb(97, 97, 97);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: wheat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.estrutura {
+    width: 60vmin;
+    height: 80vmin;
+    background-color: var(--parede);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.3fr 2fr 2fr 0.5fr;
+}
+
+.terreo {
+    grid-column: 1/1;
+    grid-row: 4/5;
+
+    background-color: var(--terreo);
+}
+
+.primeiro-andar {
+    grid-column: 1/1;
+    grid-row: 3/4;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    align-items: center;
+    justify-items: center;
+}
+
+.segundo-andar {
+    grid-column: 1/1;
+    grid-row: 2/3;
+}
+
+.terceiro-andar {
+    grid-column: 1/1;
+    grid-row: 1/2;
+}
+

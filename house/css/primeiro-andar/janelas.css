@@ -1,0 +1,35 @@
+
+.janela{
+    width: 8.4vmin;
+    height: 13vmin;
+
+    border: 1vmin solid var(--batente);
+    border-radius: 0.25vmin;
+}
+
+.janela-batente{
+    height: 11vmin;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 0.5vmin solid white;
+    z-index: 1;
+}
+
+.janela-vidro{
+    background-color: var(--janela);
+
+    border: 0.2vmin solid #ffffff;
+}
+
+.reflexo{
+    width: 1.5vmin;
+    height: 2.9vmin;
+
+    position: relative;
+    left: 0.4vmin;
+    transform: skew(-30deg);
+
+    background: var(--reflexo) ;
+}

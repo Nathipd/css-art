@@ -1,0 +1,32 @@
+.porta {
+    align-self: end;
+    width: 19vmin;
+    height: 24vmin;
+
+    background-color: var(--porta);
+
+    border: 1.5vmin solid var(--batente);
+    border-radius: 0.3vmin 0.3vmin 0 0;
+    border-bottom: none;
+}
+
+.porta-detalhes {
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 1fr;
+    grid-template-rows: 1fr 2fr;
+}
+
+.porta-detalhe {
+    height: 23vmin;
+    width: 8vmin;
+
+    position: relative;
+    bottom: 22.6vmin;
+    left: 4vmin;
+
+    border: 0.3vmin solid var(--detalhe-porta);
+    border-top: none;
+}

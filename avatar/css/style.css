@@ -1,8 +1,9 @@
 :root {
-    --skin: rgb(247, 210, 160);
-    --nose: rgb(251, 131, 98);
-    --mouth: #ec7a7a;
-    --blush: #ec7a7a;
+    --skin: #f4e6d1;
+    --eyes: #4c4c4c;
+    --nose: #ff6343;
+    --border: #391b00;
+    --blush: #f892739f;
     --hair: #0e0606;
     --roupa: rgb(207, 148, 161);
 }
@@ -38,67 +39,19 @@ body {
     box-shadow: 1vmin 4vmin 8vmin 0 rgba(0, 0, 0, 0.1);
 
     overflow: hidden;
-    background: rgb(132,48,56);
+    background: #8eb37a;
     color: #333;
     z-index: -2;
     position: relative;
 }
 
-.hair{
-    width: 34.5vmin;
-    height: 40vmin;
-    background-color: var(--hair);
-
-    position: absolute;
-    top: 25vmin;
-
-    right: 12.2vmin;
-    border-radius: 100% 100% 10% 10%;
-}
-/* .back{
-    width: 34.5vmin;
-    height: 40vmin;
-    background-color: var(--hair);
-
-    position: relative;
-    top: 25vmin;
-
-    right: 12.2vmin;
-    border-radius: 100% 100% 10% 10%;
-    z-index: -2;
-}
-.fringe {
-    width: 17vmin;
-    height: 16vmin;
-    background-color: var(--hair);
-
-    position: relative;
-    top: 40vmin;
-}
-
-.fringe:nth-child(1) {
-    left: 0;
-
-    z-index: 2;
-    
-    border-radius: 50vmin 1vmin 40vmin 0vmin;
-}
-
-.fringe:nth-child(2) {
-    left: 0;
-
-    z-index: 2;
-
-    border-radius: 0vmin 50vmin 0vmin 40vmin;
-} */
-
 .head {
-    width: 30vmin;
-    height: 35vmin;
+    width: 42vmin;
+    height: 40vmin;
     background-color: var(--skin);
 
-    border-radius: 47%;
-    box-shadow: 1vmin 1vmin 3vmin#33333324;
+    border-radius: 40%;
+    box-shadow: 0vmin 1vmin 3vmin 1vmin#33333314;
 
     position: relative;
     top: 16vmin;
@@ -106,28 +59,32 @@ body {
     z-index: 1;
 }
 
-.ears{
-    width: 3vmin;
-    height: 5vmin;
+
+.left-ear,
+.right-ear {
+    width: 7vmin;
+    height: 10vmin;
     background-color: var(--skin);
 
     position: absolute;
-    bottom: 13vmin; 
+    bottom: 26vmin;
+    z-index: -3;
 }
 
-.ears:nth-child(3){
-    left: -1.5vmin;
+.left-ear {
+    left: 9vmin;
 
-    border-radius: 40% 40% 40% 100%;
-    transform: rotate(-10deg);
+    border-radius: 100% 100% 40% 100%;
+    transform: rotate(-2deg);
 }
 
-.ears:nth-child(4){
-    right: -1.3vmin;
+.right-ear {
+    right: 9vmin;
 
-    border-radius: 40% 40% 100% 40%;
-    transform: rotate(10deg);
+    border-radius: 100% 100% 100% 40%;
+    transform: rotate(2deg);
 }
+
 
 .neck {
     width: 10vmin;
@@ -140,6 +97,192 @@ body {
     border-radius: 0% 0% 45% 45%;
 }
 
+.left-eye-background,
+.right-eye-background {
+    width: 9vmin;
+    height: 9vmin;
+    background-color: white;
+
+    position: absolute;
+}
+
+.left-eye-background {
+    top: 15vmin;
+    left: 6vmin;
+
+    border-radius: 60% 100% 20% 80%;
+}
+
+.right-eye-background {
+    top: 15vmin;
+    right: 6vmin;
+
+    border-radius: 100% 60% 80% 20%;
+}
+
+.left-eye,
+.right-eye {
+    width: 9vmin;
+    height: 8vmin;
+    background-color: transparent;
+    border: 0.5vmin solid var(--border);
+
+    position: absolute;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.left-eye {
+    border-radius: 60% 100% 20% 80%;
+}
+
+.right-eye {
+    border-radius: 100% 60% 80% 20%;
+}
+
+.left-iris,
+.right-iris {
+    width: 8vmin;
+    height: 9vmin;
+    background-color: var(--eyes);
+
+    border-radius: 100%;
+
+    position: absolute;
+    left: 26%;
+
+    z-index: -1;
+}
+
+.left-pupil,
+.right-pupil {
+    width: 2.5vmin;
+    height: 3.5vmin;
+    background-color: black;
+
+    border-radius: 50%;
+
+    position: absolute;
+    left: 40%;
+}
+
+.left-pupil {
+    top: 30%;
+}
+
+.right-pupil {
+    top: 28%;
+}
+
+
+.left-eyelashe {
+    width: 0.6vmin;
+    height: 2vmin;
+    background-color: var(--border);
+
+    border-radius: 50%;
+
+    position: absolute;
+    transform: rotate(-40deg);
+}
+
+.left-eyelashe:nth-child(1){
+    top: 16vmin;
+    left: 5.5vmin;
+
+}
+
+.left-eyelashe:nth-child(2){
+    top: 14.2vmin;
+    left: 7vmin;
+}
+
+.right-eyelashe {
+    width: 0.6vmin;
+    height: 2vmin;
+    background-color: var(--border);
+
+    border-radius: 50%;
+
+    position: absolute;
+    transform: rotate(40deg);
+}
+
+.right-eyelashe:nth-child(1){
+    top: 16vmin;
+    right: 5.5vmin;
+}
+
+.right-eyelashe:nth-child(2){
+    top: 14.2vmin;
+    right: 7vmin;
+}
+
+
+.nose {
+    width: 5vmin;
+    height: 3vmin;
+    background-color: var(--nose);
+
+    border-radius: 80% 80% 100% 100%;
+
+    position: absolute;
+    top: 22.5vmin;
+    left: 18.5vmin;
+}
+
+.nose-bright {
+    width: 35%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.795);
+
+    border-radius: 80% 80% 100% 100%;
+
+    position: relative;
+    top: 25%;
+    left: 55%;
+
+    filter: blur(0.7vmin);
+}
+
+
+.mouth {
+    width: 8vmin;
+    height: 3vmin;
+    background-color: transparent;
+
+    border-bottom: 0.5vmin solid var(--border);
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: 26.5vmin;
+    left: 17vmin;
+}
+
+
+.left-blush,
+.right-blush {
+    width: 5vmin;
+    height: 3.5vmin;
+    background-color: var(--blush);
+
+    filter: blur(0.1vmin);
+    border-radius: 100%;
+
+    position: absolute;
+    top: 27vmin;
+}
+
+.left-blush {
+    left: 4vmin;
+}
+
+.right-blush {
+    left: 32vmin;
+}
+
+
 .body {
     width: 35vmin;
     height: 20vmin;
@@ -150,83 +293,4 @@ body {
     border-radius: 50% 50% 0 0;
 
     z-index: -1;
-}
-
-.eyes {
-    width: 5vmin;
-    height: 5vmin;
-    background-color: rgb(243, 243, 243);
-
-    border-radius: 50%;
-    position: relative;
-}
-
-.eyes:nth-child(1) {
-    top: 15vmin;
-    left: 6vmin;
-}
-
-.eyes:nth-child(2) {
-    top: 10vmin;
-    left: 18vmin;
-}
-
-.pupil {
-    width: 3vmin;
-    height: 3vmin;
-    background-color: rgb(0, 0, 0);
-
-    border-radius: 50%;
-    box-shadow: 0.1vmin 0.5vmin 0.5vmin #33333320;
-
-    position: absolute;
-    top: 1vmin;
-    left: 1vmin;
-}
-
-.nose {
-    width: 3vmin;
-    height: 2vmin;
-    background-color: var(--nose);
-
-    border-radius: 50%;
-
-    position: relative;
-    top: 11vmin;
-    left: 13vmin;
-}
-
-.mouth {
-    width: 8vmin;
-    height: 5vmin;
-    background-color: var(--mouth);
-
-    border-radius: 5% 5% 50% 50%;
-
-    position: relative;
-    top: 15vmin;
-    left: 11vmin;
-}
-
-.blush {
-    width: 4vmin;
-    height: 4vmin;
-    background-color: var(--blush);
-
-    filter: blur(2vmin);
-    border-radius: 50%;
-
-}
-
-.blush:nth-child(7) {
-    position: relative;
-    top: 4vmin;
-    left: 4vmin;
-}
-
-.blush:nth-child(8) {
-    position: relative;
-    top: 0vmin;
-    left: 22vmin;
-
 }

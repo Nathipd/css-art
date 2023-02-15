@@ -5,7 +5,7 @@
     --border: #391b00;
     --blush: #f8927338;
     --hair: #0e0606;
-    --shirt: rgb(125, 136, 187);
+    --shirt: rgb(248, 170, 51);
 }
 
 * {
@@ -51,12 +51,12 @@ body {
     background-color: var(--skin);
 
     border-radius: 40%;
-    box-shadow: 0vmin 1vmin 3vmin 1vmin#33333314;
+    box-shadow: 0vmin 1vmin 3vmin 1vmin#33333317;
 
     position: absolute;
     top: 16vmin;
 
-    z-index: 1;
+    z-index: 2;
 }
 
 .left-ear,
@@ -84,11 +84,14 @@ body {
     transform: rotate(2deg);
 }
 
-.neck{
+.neck {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    z-index: 1;
 }
+
 .neck-top {
     width: 10vmin;
     height: 4vmin;
@@ -98,13 +101,14 @@ body {
     position: absolute;
     bottom: 11vmin;
 }
-.neck-bottom{
+
+.neck-bottom {
     width: 0;
     height: 0;
 
     border-left: 4.9vmin solid transparent;
     border-right: 4.9vmin solid transparent;
-    border-top: 4vmin  solid var(--skin);
+    border-top: 4vmin solid var(--skin);
 
     position: absolute;
     bottom: 7.1vmin;
@@ -243,7 +247,7 @@ body {
 
     position: absolute;
     top: 22.5vmin;
-    left: 18.5vmin; 
+    left: 18.5vmin;
 }
 
 .nose-bright {
@@ -262,18 +266,17 @@ body {
 
 
 .mouth {
-    height: 1.5vmin;
-    width: 5vmin;
-
-    position: absolute;
-    bottom: 10vmin;
-    left: 18.5vmin;
+    background: transparent;
+    width: 10vmin;
+    height: 4vmin;
 
     border-radius: 50%;
-    border-bottom: 0.7vmin solid var(--border); 
+    box-shadow: 0vmin 0.7vmin var(--border);
+
+    position: absolute;
+    bottom: 11vmin;
+    left: 16vmin;
 }
-
-
 
 
 .left-blush,

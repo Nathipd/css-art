@@ -261,39 +261,16 @@ body {
 }
 
 
-.left-mouth,
-.mid-mouth,
-.right-mouth {
-    width: 4vmin;
+.mouth {
     height: 1.5vmin;
-    background-color: transparent;
-
-    border-bottom: 0.67vmin solid var(--border);
-
-    border-radius: 50%;
+    width: 5vmin;
 
     position: absolute;
-}
+    bottom: 10vmin;
+    left: 18.5vmin;
 
-.left-mouth {
-    top: 27.5vmin;
-    left: 16.4vmin;
-}
-
-.right-mouth {
-    top: 27.5vmin;
-    right: 16.4vmin;
-}
-
-.mid-mouth {
-    height: 1vmin;
-    width: 3vmin;
-
-    top: 28.5vmin;
-    left: 19.5vmin;
-    border-bottom: 0.7vmin solid var(--border);
-
-    transform: rotate(180deg);
+    border-radius: 50%;
+    border-bottom: 0.7vmin solid var(--border); 
 }
 
 

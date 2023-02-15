@@ -3,7 +3,7 @@
     --eyes: #4c4c4c;
     --nose: #ff6343;
     --border: #391b00;
-    --blush: #f892739f;
+    --blush: #f8927338;
     --hair: #0e0606;
     --roupa: rgb(207, 148, 161);
 }
@@ -97,47 +97,46 @@ body {
     border-radius: 0% 0% 45% 45%;
 }
 
-.left-eye-background,
-.right-eye-background {
-    width: 9vmin;
-    height: 9vmin;
-    background-color: white;
-
-    position: absolute;
-}
-
-.left-eye-background {
-    top: 15vmin;
-    left: 6vmin;
-
-    border-radius: 60% 100% 20% 80%;
-}
-
-.right-eye-background {
-    top: 15vmin;
-    right: 6vmin;
-
-    border-radius: 100% 60% 80% 20%;
-}
-
 .left-eye,
 .right-eye {
     width: 9vmin;
     height: 8vmin;
-    background-color: transparent;
+    background-color: rgb(255, 255, 255);
     border: 0.5vmin solid var(--border);
 
     position: absolute;
+
     overflow: hidden;
     z-index: 1;
 }
 
 .left-eye {
-    border-radius: 60% 100% 20% 80%;
+    top: 15vmin;
+    left: 6vmin;
+
+    border-radius: 70% 100% 40% 80%;
+
+    border-top: 0.6vmin solid var(--border);
+    border-right: 0.4vmin solid var(--border);
+    border-bottom: 0.4vmin solid var(--border);
+    border-left: 0.6vmin solid var(--border);
+
+    transform: rotate(-3deg);
 }
 
 .right-eye {
-    border-radius: 100% 60% 80% 20%;
+    top: 15vmin;
+    right: 6vmin;
+
+    border-radius: 100% 70% 80% 40%;
+
+
+    border-top: 0.6vmin solid var(--border);
+    border-right: 0.6vmin solid var(--border);
+    border-bottom: 0.4vmin solid var(--border);
+    border-left: 0.4vmin solid var(--border);
+
+    transform: rotate(3deg);
 }
 
 .left-iris,
@@ -175,7 +174,7 @@ body {
 }
 
 
-.left-eyelashe {
+.left-eyelashes {
     width: 0.6vmin;
     height: 2vmin;
     background-color: var(--border);
@@ -186,18 +185,18 @@ body {
     transform: rotate(-40deg);
 }
 
-.left-eyelashe:nth-child(1){
+.left-eyelashes:nth-child(1) {
     top: 16vmin;
     left: 5.5vmin;
 
 }
 
-.left-eyelashe:nth-child(2){
+.left-eyelashes:nth-child(2) {
     top: 14.2vmin;
     left: 7vmin;
 }
 
-.right-eyelashe {
+.right-eyelashes {
     width: 0.6vmin;
     height: 2vmin;
     background-color: var(--border);
@@ -208,14 +207,14 @@ body {
     transform: rotate(40deg);
 }
 
-.right-eyelashe:nth-child(1){
+.right-eyelashes:nth-child(1) {
     top: 16vmin;
-    right: 5.5vmin;
+    right: 5.4vmin;
 }
 
-.right-eyelashe:nth-child(2){
+.right-eyelashes:nth-child(2) {
     top: 14.2vmin;
-    right: 7vmin;
+    right: 6.8vmin;
 }
 
 
@@ -246,19 +245,39 @@ body {
 }
 
 
-.mouth {
-    width: 8vmin;
-    height: 3vmin;
+.left-mouth, .mid-mouth, .right-mouth {
+    width: 4vmin;
+    height: 1.5vmin;
     background-color: transparent;
 
-    border-bottom: 0.5vmin solid var(--border);
+    border-bottom: 0.67vmin solid var(--border);
 
     border-radius: 50%;
 
     position: absolute;
-    top: 26.5vmin;
-    left: 17vmin;
 }
+.left-mouth{
+    top: 27.5vmin;
+    left: 16.4vmin;
+}
+
+.right-mouth{
+    top: 27.5vmin;
+    right: 16.4vmin;  
+}
+
+.mid-mouth{
+    height: 1vmin;
+    width: 3vmin;
+
+    top: 28.5vmin;
+    left: 19.5vmin;
+    border-bottom: 0.7vmin solid var(--border);
+
+    transform: rotate(180deg);
+}
+
+
 
 
 .left-blush,

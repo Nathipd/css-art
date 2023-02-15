@@ -5,7 +5,7 @@
     --border: #391b00;
     --blush: #f8927338;
     --hair: #0e0606;
-    --roupa: rgb(207, 148, 161);
+    --shirt: rgb(125, 136, 187);
 }
 
 * {
@@ -53,12 +53,11 @@ body {
     border-radius: 40%;
     box-shadow: 0vmin 1vmin 3vmin 1vmin#33333314;
 
-    position: relative;
+    position: absolute;
     top: 16vmin;
 
     z-index: 1;
 }
-
 
 .left-ear,
 .right-ear {
@@ -85,17 +84,34 @@ body {
     transform: rotate(2deg);
 }
 
-
-.neck {
-    width: 10vmin;
-    height: 13vmin;
-    background-color: var(--skin);
-
-    position: relative;
-    top: 11vmin;
-
-    border-radius: 0% 0% 45% 45%;
+.neck{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.neck-top {
+    width: 10vmin;
+    height: 4vmin;
+    background-color: var(--skin);
+    border-radius: 10%;
+
+    position: absolute;
+    bottom: 11vmin;
+}
+.neck-bottom{
+    width: 0;
+    height: 0;
+
+    border-left: 4.9vmin solid transparent;
+    border-right: 4.9vmin solid transparent;
+    border-top: 4vmin  solid var(--skin);
+
+    position: absolute;
+    bottom: 7.1vmin;
+
+    z-index: 5;
+}
+
 
 .left-eye,
 .right-eye {
@@ -227,7 +243,7 @@ body {
 
     position: absolute;
     top: 22.5vmin;
-    left: 18.5vmin;
+    left: 18.5vmin; 
 }
 
 .nose-bright {
@@ -245,7 +261,9 @@ body {
 }
 
 
-.left-mouth, .mid-mouth, .right-mouth {
+.left-mouth,
+.mid-mouth,
+.right-mouth {
     width: 4vmin;
     height: 1.5vmin;
     background-color: transparent;
@@ -256,17 +274,18 @@ body {
 
     position: absolute;
 }
-.left-mouth{
+
+.left-mouth {
     top: 27.5vmin;
     left: 16.4vmin;
 }
 
-.right-mouth{
+.right-mouth {
     top: 27.5vmin;
-    right: 16.4vmin;  
+    right: 16.4vmin;
 }
 
-.mid-mouth{
+.mid-mouth {
     height: 1vmin;
     width: 3vmin;
 
@@ -304,12 +323,70 @@ body {
 
 .body {
     width: 35vmin;
-    height: 20vmin;
-    background-color: var(--roupa);
+    height: 13vmin;
+    background-color: transparent;
 
-    position: relative;
-    top: 5vmin;
-    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: 0vmin;
 
     z-index: -1;
+}
+
+.shirt {
+    width: 20vmin;
+    height: 13vmin;
+    background-color: var(--shirt);
+
+    position: absolute;
+    bottom: 0vmin;
+    left: 8vmin;
+
+    border-radius: 50% 50% 0% 0%;
+
+}
+
+
+.left-shoulder,
+.right-shoulder {
+    width: 8vmin;
+    height: 6vmin;
+    background-color: var(--shirt);
+
+    border-radius: 27%;
+
+    position: absolute;
+    bottom: 6.5vmin;
+}
+
+.left-shoulder {
+    left: 7vmin;
+    transform: rotate(-10deg);
+}
+
+.right-shoulder {
+    right: 7vmin;
+    transform: rotate(10deg);
+}
+
+
+.left-arm,
+.right-arm {
+    width: 6.4vmin;
+    height: 15vmin;
+    background-color: var(--shirt);
+
+    position: absolute;
+    bottom: -3vmin;
+}
+
+.left-arm {
+    left: 3.8vmin;
+    border-radius: 20% 0% 0% 0%;
+    transform: rotate(28deg);
+}
+
+.right-arm {
+    border-radius: 0% 20% 0% 0%;
+    transform: rotate(-28deg);
+    right: 3.6vmin;
 }

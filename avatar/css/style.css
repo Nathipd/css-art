@@ -1,10 +1,11 @@
 :root {
-    --skin: #f4e6d1;
+    --skin: rgba(241, 199, 173, 1);
     --eyes: #4c4c4c;
     --nose: #ff6343;
     --border: #391b00;
     --blush: #f8927338;
-    --hair: #0e0606;
+    --hair: #3d3c36;
+    --hair-shadow: #35342d;
     --shirt: rgb(248, 170, 51);
 }
 
@@ -49,9 +50,10 @@ body {
     width: 42vmin;
     height: 40vmin;
     background-color: var(--skin);
+    background: linear-gradient(22deg, rgba(241, 199, 173, 1) 11%, rgba(249, 228, 207, 1) 92%);
 
     border-radius: 40%;
-    box-shadow: 0vmin 1vmin 3vmin 1vmin#33333317;
+    box-shadow: 0vmin 1vmin 3vmin 1.5vmin#5252520a;
 
     position: absolute;
     top: 16vmin;
@@ -243,10 +245,10 @@ body {
     height: 3vmin;
     background-color: var(--nose);
 
-    border-radius: 80% 80% 100% 100%;
+    border-radius: 85% 85% 100% 100%;
 
     position: absolute;
-    top: 22.5vmin;
+    top: 23.4vmin;
     left: 18.5vmin;
 }
 
@@ -274,7 +276,7 @@ body {
     box-shadow: 0vmin 0.7vmin var(--border);
 
     position: absolute;
-    bottom: 11vmin;
+    bottom: 9.5vmin;
     left: 16vmin;
 }
 
@@ -369,4 +371,117 @@ body {
     border-radius: 0% 20% 0% 0%;
     transform: rotate(-28deg);
     right: 3.6vmin;
+}
+
+.hair {
+    width: 55vmin;
+    height: 55vmin;
+    z-index: 3;
+
+}
+
+.top-hair {
+    width: 42vmin;
+    height: 40vmin;
+    background-color: transparent;
+
+    border-radius: 40%;
+    position: absolute;
+    transform: translate(6.5vmin, 13vmin) rotate(180deg);
+
+    box-shadow: 0vmin 6vmin 0vmin 0.7vmin var(--hair-shadow);
+}
+
+.top-hair::after {
+    content: '';
+    width: 10vmin;
+    height: 10vmin;
+    background-color: var(--hair-shadow);
+
+    border-radius: 40%;
+    position: absolute;
+    transform: translate(12vmin, 35.3vmin);
+}
+
+.top-hair-left {
+    width: 6vmin;
+    height: 20vmin;
+    background-color: var(--hair-shadow);
+
+    border-radius: 12vmin 10% 10% 12vmin;
+
+    position: absolute;
+    transform: translate(17.3vmin, 4.9vmin) rotate(90deg);
+}
+
+.top-hair-right {
+    width: 5vmin;
+    height: 10.5vmin;
+    background-color: var(--hair-shadow);
+
+    border-radius: 10% 10% 10% 80%;
+
+    position: absolute;
+    transform: translate(32.8vmin, 10.1vmin) rotate(90deg);
+}
+
+.top-hair-right::after {
+    content: '';
+    width: 5vmin;
+    height: 10.5vmin;
+    background-color: var(--hair-shadow);
+
+    border-radius: 80% 10% 10% 10%;
+
+    position: absolute;
+    transform: translate(0vmin, -5vmin);
+}
+
+.left-hair {
+    width: 35vmin;
+    height: 42vmin;
+
+    position: absolute;
+    transform: translate(6.5vmin, 13vmin) rotate(0deg);
+    border-radius: 45%;
+    box-shadow: -4vmin -5vmin 0 -3vmin var(--hair);
+
+    z-index: 3;
+}
+
+.left-hair::before {
+    content: '';
+    width: 5vmin;
+    height: 17vmin;
+
+    position: absolute;
+    transform: translate(0vmin, 18vmin);
+    border-radius: 0% 0% 0% 50%;
+    box-shadow: -1vmin 0.1vmin 0 -0.2vmin var(--hair);
+
+    z-index: 3;
+}
+
+.left-hair::after {
+    content: '';
+    width: 7vmin;
+    height: 4vmin;
+    background-color: transparent;
+
+    position: absolute;
+    transform: translate(17vmin, 1vmin) rotate(-130deg);
+    border-radius: 50%;
+    box-shadow: 0vmin 1.3vmin 0 -0.5vmin var(--hair);
+
+    z-index: 3;
+}
+
+.right-hair {
+    width: 19vmin;
+    height: 14.3vmin;
+
+    position: absolute;
+    transform: translate(27.5vmin, 15vmin) rotate(-168deg);
+    border-radius: 50%;
+    box-shadow: 0vmin 2.4vmin 0 -1.2vmin var(--hair);
 }
